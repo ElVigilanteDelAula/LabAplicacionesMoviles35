@@ -1,0 +1,10 @@
+<h2>
+    Listado clientes
+</h2>
+<div *ngIf="! clientes.length">No hay clientes por el momento</div>
+<table>
+    <tr *ngFor ="let cliente of clientes">
+       <app-item-cliente [cliente]= "cliente" (borrarCliente)= "doBorrarCliente($event)">
+       </app-item-cliente>
+    </tr>
+</table>
